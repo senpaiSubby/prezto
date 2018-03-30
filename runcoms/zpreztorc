@@ -30,14 +30,20 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'fasd' \
   'history' \
   'history-substring-search' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
+  'command-not-found' \
+  'git' \
+  'rsync' \
+  'screen' \
   'syntax-highlighting' \
   'prompt'
+
 
 #
 # Autosuggestions
@@ -145,7 +151,7 @@ zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:screen:auto-start' local 'yes'
+#zstyle ':prezto:module:screen:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:screen:auto-start' remote 'yes'
@@ -186,7 +192,7 @@ zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 #
 
 # Auto set the tab and window titles.
-# zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Set the window title format.
 # zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
@@ -220,4 +226,4 @@ zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 # Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
-# zstyle ':prezto:module:utility' safe-ops 'yes'
+zstyle ':prezto:module:utility' safe-ops 'yes'

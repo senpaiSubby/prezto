@@ -25,7 +25,7 @@ fi
 
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(dir_writable)
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 #POWERLEVEL9K_MODE='awesome-patched'
@@ -74,7 +74,6 @@ POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=false
 POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL=90
 POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
 alias reddit="rtv --theme sublime --enable-media"
@@ -97,3 +96,8 @@ alias aurr="yaourt -Rs"
 alias copy="rsync -Phva --info=progress2"
 alias key="gpg --recv-keys"
 alias services="cd /usr/lib/systemd/system/"
+
+bindkey "^a" beginning-of-line
+bindkey "^e" end-of-line
+bindkey "^f" forward-word
+bindkey "^b" backward-word
