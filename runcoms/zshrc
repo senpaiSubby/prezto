@@ -76,6 +76,10 @@ POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
+alias ytdlp="youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
+alias ytdl="youtube-dl"
+alias wpa_supplicant="sudo wpa_supplicant"
+alias dhcpcd="sudo dhcpcd"
 alias reddit="rtv --theme sublime --enable-media"
 alias trash="trash-put"
 alias auru="yaourt -Syu --aur"
