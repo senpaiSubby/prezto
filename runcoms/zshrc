@@ -82,7 +82,6 @@ alias wpa_supplicant="sudo wpa_supplicant"
 alias dhcpcd="sudo dhcpcd"
 alias reddit="rtv --theme sublime --enable-media"
 alias trash="trash-put"
-alias auru="yaourt -Syu --aur"
 alias torrent="torrench -t --copy"
 alias pac="sudo pacman -S"
 alias pacs="sudo pacman -Ss"
@@ -94,9 +93,9 @@ alias status="sudo systemctl status"
 alias stop="sudo systemctl stop"
 alias disable="sudo systemctl disable"
 alias enable="sudo systemctl enable"
-alias aur="yaourt -S"
-alias aurs="yaourt -Ss"
-alias aurr="yaourt -Rs"
+alias aur="yay -S"
+alias aurs="yay -Ss"
+alias aurr="yay -Rs"
 alias copy="rsync -Phva --info=progress2"
 alias key="gpg --recv-keys"
 alias services="cd /usr/lib/systemd/system/"
@@ -105,3 +104,5 @@ bindkey "^a" beginning-of-line
 bindkey "^e" end-of-line
 bindkey "^f" forward-word
 bindkey "^b" backward-word
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
