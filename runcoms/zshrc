@@ -13,6 +13,7 @@
 export DEFAULT_USER="sublime"
 export LANG=en_US.UTF-8
 export TERM="xterm-256color"
+export EDITOR=$(which nvim)
 
 #source ~/.sublimerc
 
@@ -31,7 +32,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(dir_writable battery)
 POWERLEVEL9K_MODE='nerdfont-complete'
 #POWERLEVEL9K_MODE='awesome-patched'
 
-
+POWERLEVEL9K_TIME_FOREGROUND='black'
+POWERLEVEL9K_TIME_BACKGROUND='yellow'
 
 POWERLEVEL9K_LINUX_ICON="\uf281"
 POWERLEVEL9K_HOME_ICON="\uf7db"
