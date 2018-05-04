@@ -38,6 +38,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'zsh-autosuggestions' \
+  'tldr' \
   'command-not-found' \
   'git' \
   'rsync' \

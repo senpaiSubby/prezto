@@ -15,6 +15,17 @@ export LANG=en_US.UTF-8
 export TERM="xterm-256color"
 export EDITOR=$(which nvim)
 
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
+
 #source ~/.sublimerc
 
 # Source Prezto.
@@ -101,6 +112,8 @@ POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
+alias themes="ranger ~/github/rice/config/wal-themes"
+alias htop="htop -d 0"
 alias wifi="sudo wicd-curses"
 alias ytdlp="youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
 alias ytdl="youtube-dl"
