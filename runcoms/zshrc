@@ -112,6 +112,7 @@ POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
+alias mag="magnet2torrent -o ~/downloads/torrents/watch -m"
 alias themes="ranger ~/github/rice/config/wal-themes"
 alias htop="htop -d 0"
 alias wifi="sudo wicd-curses"
