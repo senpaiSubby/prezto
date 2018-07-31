@@ -4,14 +4,8 @@ export TERMINAL="urxvt"
 export EDITOR="nvim"
 export BROWSER="qutebrowser"
 export PATH=$PATH:$HOME/git/rice/scripts
+export PATH=$PATH:$HOME/.local/bin
 
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
-
-# To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -98,18 +92,13 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
 alias p3="python3"
-alias //="fzf"
 alias s="sudo"
 alias sn="sudo nvim"
 alias ls="exa --header --git"
-alias chmox="chmod +x"
 alias n="nvim"
-alias h="hmm.sh"
-alias htop="htop -d 0"
 alias wifi="sudo wicd-curses"
 alias ytdlp="youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
 alias ytdl="youtube-dl"
-alias trash="trash-put"
 alias pac="sudo pacman -S"
 alias pacs="sudo pacman -Ss"
 alias pacr="sudo pacman -Rs"
@@ -131,4 +120,4 @@ bindkey -v
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
