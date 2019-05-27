@@ -121,6 +121,9 @@ zstyle ':prezto:module:pacman' frontend 'yay'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'powerlevel9k'
+#zstyle ':prezto:module:prompt' theme 'off'
+
+
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
