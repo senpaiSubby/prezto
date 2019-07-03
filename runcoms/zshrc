@@ -1,11 +1,11 @@
 export DEFAULT_USER="sublime"
 export LANG=en_US.UTF-8
-export TERMINAL="urxvt"
+export TERMINAL="xterm"
 export EDITOR="nvim"
 export BROWSER="qutebrowser"
-export PATH=$PATH:$HOME/git/rice/scripts
-export PATH=$PATH:$HOME/.local/bin
-
+export PATH=${PATH}:${HOME}/Git/scripts
+export PATH=${PATH}:${HOME}/.local/bin
+#source ~/.promptline.sh
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -91,6 +91,7 @@ POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
+alias hmm="hmm.py"
 alias p3="python3"
 alias s="sudo"
 alias sn="sudo nvim"
@@ -122,3 +123,4 @@ bindkey -v
 
 #eval $(thefuck --alias)
 source /etc/locale.conf
+#source ~/.promptline.sh
