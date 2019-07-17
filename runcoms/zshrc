@@ -95,6 +95,7 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
 
 alias yt="youtube-dl --prefer-ffmpeg --merge-output-format mkv --add-metadata --write-description --write-thumbnail -o '%(uploader)s - %(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
+alias fsizes="du -hsc *"
 alias pp="cd ~/Git/projects"
 alias sub="sudo chown -R sublime:sublime"
 alias scripts="cd ~/Git/scripts"
