@@ -9,7 +9,9 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=${PATH}:${HOME}/git/scripts/
 export PATH=${PATH}:${HOME}/.local/bin
-#source ~/.promptline.sh
+export PATH=~/.npm-global/bin:$PATH
+
+
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -130,8 +132,3 @@ bindkey -v
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-eval $(thefuck --alias)
-source /etc/locale.conf
-#source ~/.promptline.sh
-source /usr/share/nvm/init-nvm.sh
