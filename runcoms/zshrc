@@ -8,6 +8,9 @@ export MONGO_PORT=27017
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=${PATH}:${HOME}/git/scripts/
+export PATH=${PATH}:${HOME}/git/scripts/bash
+export PATH=${PATH}:${HOME}/git/scripts/python
+export PATH=${PATH}:${HOME}/git/scripts/node/scripts
 export PATH=${PATH}:${HOME}/.local/bin
 export PATH=~/.npm-global/bin:$PATH
 
@@ -98,19 +101,11 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
 
-alias yt="youtube-dl --prefer-ffmpeg --merge-output-format mkv --add-metadata --write-description --write-thumbnail -o '%(uploader)s - %(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
+alias hdmioff="xrandr --output HDMI1 --off && bspc monitor -d 1 2 3 4 5"
+alias hdmi="xrandr --output HDMI1 --above LVDS1 --mode 1920x1080 --rate 605"
+
 alias fsizes="du -hsc *"
-alias pp="cd ~/Git/projects"
-alias sub="sudo chown -R sublime:sublime"
-alias scripts="cd ~/Git/scripts"
-alias p3="python3"
-alias s="sudo"
-alias sn="sudo nvim"
-alias ls="exa --header --git"
-alias n="nvim"
 alias wifi="sudo wicd-curses"
-alias ytdlp="youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'"
-alias ytdl="youtube-dl"
 alias pac="sudo pacman -S"
 alias pacu="sudo pacman -Syyu"
 alias pacs="sudo pacman -Ss"
@@ -132,3 +127,4 @@ bindkey -v
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+xrandr --output DP1 --right-of LVDS1 --mode 1920x1080 --rate 60
