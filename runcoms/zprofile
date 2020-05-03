@@ -1,37 +1,36 @@
 #
 # Executes commands at login pre-zshrc.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
-#
 # Browser
-#
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-#
 # Editors
-#
-
+export DEFAULT_USER="sublime"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
+export TERMINAL="xterm"
+export TERM="xterm-256color"
+export EDITOR="nvim"
+export BROWSER="chromium"
+export NODE_OPTIONS=--max_old_space_size=4096
 
-#
 # Language
-#
-
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
-#
 # Paths
-#
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=${PATH}:${HOME}/git/scripts/
+export PATH=${PATH}:${HOME}/git/scripts/bash
+export PATH=${PATH}:${HOME}/git/scripts/python
+export PATH=${PATH}:${HOME}/git/scripts/node/dist
+export PATH=${PATH}:${HOME}/.local/bin
+export PATH=~/.npm-global/bin:$PATH
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path

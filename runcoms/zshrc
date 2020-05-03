@@ -1,24 +1,5 @@
-
-
 # Change xterm cursor into ibeam
 echo -e -n "\x1b[\x35 q"
-
-export DEFAULT_USER="sublime"
-export LANG=en_US.UTF-8
-export TERMINAL="xterm"
-export TERM="xterm-256color"
-export EDITOR="nvim"
-export BROWSER="chromium"
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PATH=${PATH}:${HOME}/git/scripts/
-export PATH=${PATH}:${HOME}/git/scripts/bash
-export PATH=${PATH}:${HOME}/git/scripts/python
-export PATH=${PATH}:${HOME}/git/scripts/node/scripts
-export PATH=${PATH}:${HOME}/.local/bin
-export PATH=~/.npm-global/bin:$PATH
-
-
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -26,112 +7,46 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 
-
-# Customize to your needs...
-
 ENABLE_CORRECTION="true"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(dir_writable battery)
+# ---------- Aliases ----------
 
-POWERLEVEL9K_MODE='nerdfont-complete'
-#POWERLEVEL9K_MODE='awesome-patched'
-
-POWERLEVEL9K_TIME_FOREGROUND='#222222'
-POWERLEVEL9K_TIME_BACKGROUND='yellow'
-
-POWERLEVEL9K_LINUX_ICON="\uf281"
-POWERLEVEL9K_HOME_ICON="\uf7db"
-POWERLEVEL9K_HOME_SUB_ICON="\ue5ff"
-POWERLEVEL9K_FOLDER_ICON="\ue5ff"
-POWERLEVEL9K_HOST_ICON="\uf300"
-POWERLEVEL9K_SSH_ICON="\uF489"
-POWERLEVEL9K_USER_ICON="\uf281"
-POWERLEVEL9K_COLOR_SCHEME='dark'
-
-POWERLEVEL9K_BATTERY_ICON='\uf240'
-POWERLEVEL9K_BATTERY_LOW_BACKGROUND='#f92c23'
-POWERLEVEL9K_BATTERY_LOW_FOREGROUND='#222222'
-POWERLEVEL9K_BATTERY_CHARGING_BACKGROUND='yellow'
-POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='#222222'
-POWERLEVEL9K_BATTERY_CHARGED_BACKGROUND='#b2b602'
-POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='#222222'
-POWERLEVEL9K_BATTERY_DISCONNECTED_BACKGROUND='#b2b602'
-POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='#222222'
-
-
-POWERLEVEL9K_HOST_LOCAL_FOREGROUND='#222222'
-POWERLEVEL9K_HOST_LOCAL_BACKGROUND='#b2b602'
-POWERLEVEL9K_HOST_REMOTE_FOREGROUND='#222222'
-POWERLEVEL9K_HOST_REMOTE_BACKGROUND='#b2b602'
-POWERLEVEL9K_USER_DEFAULT_FOREGROUND='#222222'
-POWERLEVEL9K_USER_DEFAULT_BACKGROUND='#b2b602'
-POWERLEVEL9K_USER_DEFAULT_FOREGROUND='#222222'
-POWERLEVEL9K_USER_DEFAULT_BACKGROUND='#b2b602'
-
-POWERLEVEL9K_ALWAYS_SHOW_USER=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='\uf061 '
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND="#b2b602"
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND="#222222"
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="#f92c23"
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="#222222"
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="#f92c23"
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="#222222"
-POWERLEVEL9K_USER_BACKGROUND="#f92c23"
-POWERLEVEL9K_USER_FOREGROUND="#b2b602"
-POWERLEVEL9K_HOST_TEMPLATE="%2m"
-
-POWERLEVEL9K_OS_ICON_BACKGROUND="#b2b602"
-POWERLEVEL9K_OS_ICON_FOREGROUND="#222222"
-POWERLEVEL9K_DIR_HOME_BACKGROUND="#b2b602"
-POWERLEVEL9K_DIR_HOME_FOREGROUND="#222222"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="#b2b602"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="#222222"
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="#b2b602"
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="#222222"
-POWERLEVEL9K_STATUS_OK_BACKGROUND="#b2b602"
-POWERLEVEL9K_STATUS_OK_FOREGROUND="#222222"
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND="#f92c23"
-POWERLEVEL9K_STATUS_ERROR_FOREGROUND="#222222"
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="#f92c23"
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="#222222"
-POWERLEVEL9K_DISK_USAGE_BACKGROUND="#b2b602"
-POWERLEVEL9K_DISK_USAGE_FOREGROUND="#b2b602"
-POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=false
-POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL=90
-POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
-
-
-alias mount-ichigo="sudo sshfs -o allow_other,IdentityFile=~/.ssh/id_rsa sublime@10.0.0.5:/ /mnt/ichigo"
-alias hdmioff="xrandr --output HDMI1 --off && bspc monitor -d 1 2 3 4 5"
-alias hdmi="xrandr --output HDMI1 --above LVDS1 --mode 1920x1080 --rate 605"
-
-alias fsizes="du -hsc *"
-alias wifi="sudo wicd-curses"
+# Pacman
 alias pac="sudo pacman -S"
 alias pacu="sudo pacman -Syyu"
 alias pacs="sudo pacman -Ss"
 alias pacr="sudo pacman -Rs"
+
+alias aur="yay -S"
+alias auru="yay -Syyu"
+alias aurs="yay -Ss"
+alias aurr="yay -Rs"
+
+# Services
 alias start="sudo systemctl start"
 alias restart="sudo systemctl restart"
 alias status="sudo systemctl status"
 alias stop="sudo systemctl stop"
 alias disable="sudo systemctl disable"
 alias enable="sudo systemctl enable"
-alias aur="yay -S"
-alias auru="yay -Syyu"
-alias aurs="yay -Ss"
-alias aurr="yay -Rs"
-alias copy="rsync -Phva --info=progress2"
 
+# File Management
+alias copy="rsync -Phva --info=progress2"
+alias fsizes="du -hsc *"
+
+# System
+# Shortcuts
+alias wifi="sudo wicd-curses"
+
+alias mount-server="sudo sshfs -o allow_other sublime@10.0.0.25:/ /mnt/ichigo"
+alias mount-seedbox="sudo sshfs -o allow_other callmekory@gegenees.feralhosting.com:/media/sdaj1/callmekory /mnt/seedbox/"
+
+alias wake-server="wol d4:ae:52:d3:c3:62"
 
 bindkey -v
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
