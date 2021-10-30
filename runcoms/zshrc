@@ -1,6 +1,8 @@
 # Change xterm cursor into ibeam
 echo -e -n "\x1b[\x35 q"
 
+export PATH=/srv/scripts:$PATH
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
