@@ -7,13 +7,12 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 # Editors
-export DEFAULT_USER="sublime"
+export DEFAULT_USER="subby"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
 export TERMINAL="xterm"
 export TERM="xterm-256color"
-export EDITOR="nvim"
 export BROWSER="chromium"
 export NODE_OPTIONS=--max_old_space_size=4096
 

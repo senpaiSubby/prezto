@@ -1,6 +1,13 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Change xterm cursor into ibeam
 echo -e -n "\x1b[\x35 q"
-
+EDITOR="nvim"
 export PATH=/srv/scripts:$PATH
 
 # Source Prezto.
@@ -11,7 +18,16 @@ fi
 
 ENABLE_CORRECTION="true"
 
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 # ---------- Aliases ----------
+
+# tmux
+alias ta="tmux attach-session -t"
+alias tk="tmux kill-session"
+alias tl="tmux list-sessions"
+alias tn="tmux new-session -s"
+alias tr="tmux rename-session"
 
 # Pacman
 alias pac="sudo pacman -S"
@@ -35,11 +51,13 @@ alias enable="sudo systemctl enable"
 # File Management
 alias copy="rsync -Phva --info=progress2"
 alias fsizes="du -hsc *"
+alias rm="trash-put"
+alias disk-speedtest="dd if=/dev/zero of=./10GB.file bs=1M count=10240 oflag=nocache conv=fdatasync status=progress"
 
 # System
 # Shortcuts
+alias v="nvim"
 alias wifi="sudo wicd-curses"
-
 alias mount-server="sudo sshfs -o allow_other sublime@10.0.0.25:/ /mnt/ichigo"
 alias mount-seedbox="sudo sshfs -o allow_other callmekory@gegenees.feralhosting.com:/media/sdaj1/callmekory /mnt/seedbox/"
 
@@ -52,3 +70,12 @@ bindkey -v
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+/srv/scripts/orion/motd/10-hostname-color
+/srv/scripts/orion/motd/20-sysinfo
+/srv/scripts/orion/motd/35-diskspace
+/srv/scripts/orion/motd/60-docker
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
