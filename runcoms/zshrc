@@ -58,9 +58,6 @@ alias disk-speedtest="dd if=/dev/zero of=./10GB.file bs=1M count=10240 oflag=noc
 # Shortcuts
 alias v="nvim"
 alias wifi="sudo wicd-curses"
-alias mount-server="sudo sshfs -o allow_other sublime@10.0.0.25:/ /mnt/ichigo"
-alias mount-seedbox="sudo sshfs -o allow_other callmekory@gegenees.feralhosting.com:/media/sdaj1/callmekory /mnt/seedbox/"
-
 alias wake-server="wol d4:ae:52:d3:c3:62"
 
 bindkey -v
@@ -71,11 +68,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-/srv/scripts/orion/motd/10-hostname-color
-/srv/scripts/orion/motd/20-sysinfo
-/srv/scripts/orion/motd/35-diskspace
-/srv/scripts/orion/motd/60-docker
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+/srv/scripts/motd/10-hostname-color
+/srv/scripts/motd/20-sysinfo
+/srv/scripts/motd/35-diskspace
+/srv/scripts/motd/60-docker
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
