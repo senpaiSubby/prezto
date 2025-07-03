@@ -28,6 +28,9 @@ export PATH=${PATH}:${HOME}/git/scripts/
 export PATH=${PATH}:${HOME}/git/scripts/bash
 export PATH=${PATH}:${HOME}/git/scripts/python
 export PATH=${PATH}:${HOME}/git/scripts/node/dist
+export PATH=${PATH}:/srv/scripts
+export PATH=${PATH}:${HOME}/dotfiles/scripts
+export PATH=${PATH}:${HOME}/dotfiles/scripts/motd
 export PATH=${PATH}:${HOME}/.local/bin
 export PATH=~/.npm-global/bin:$PATH
 
@@ -55,7 +58,6 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-# Auto login on tty1
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
+if uwsm check may-start && uwsm select; then
+	exec uwsm start default
 fi
